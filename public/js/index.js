@@ -1,4 +1,4 @@
-let cartItems = [];
+let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
 $(".recommended-wrapper").on("click", ".title", function() {
     window.location.href = "product.html";

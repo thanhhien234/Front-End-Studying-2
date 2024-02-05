@@ -33,6 +33,8 @@ cartBody.on('change', 'input[type="number"]', function() {
     const quantity = parseInt(input.val());
     const sum = book.price * quantity;
     input.closest('tr').find('td:eq(2)').text(`${sum}원`);
+    book.quantity = quantity;
+    localStorage.setItem("cartItems", JSON.stringify(cartData));
 });
 
 cartBody.on('click', '.material-symbols-outlined', function() {
