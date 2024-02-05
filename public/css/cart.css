@@ -1,0 +1,111 @@
+.cart-container {
+    display: flex;
+    justify-content: center;
+}
+#cartTable {
+    width: 70%;
+    margin-top: 2%;
+    margin-bottom: 6%;
+    border-collapse: collapse;
+    border: 1px solid #ccc; 
+}
+#cartTable thead {
+    background-color: #ddd;
+}
+#cartTable th {
+    padding: 10px; 
+    border-bottom: 2px solid #ccc; 
+}
+
+#cartTable tbody tr {
+    border-bottom: 1px solid #ddd; 
+}
+  
+#cartTable td:nth-child(1) {
+    display: flex;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+#cartTable td:nth-child(2) {
+    width: 15%; 
+    text-align: center;
+}
+
+#cartTable td:nth-child(3) {
+    width: 20%; 
+    text-align: center;
+}
+
+#cartTable td:nth-child(4) {
+    width: 5%; 
+    text-align: center;
+    cursor: pointer;
+}
+
+#cartTable td {
+    padding: 10px;
+}
+
+
+.book img {
+    width: 70px; 
+    height: auto; 
+    margin-right: 15px;
+}
+
+.book-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.book .title {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.book .author,
+.book .price {
+    margin-top: 0;
+}
+.book-text .price {
+    font-size: 13px;
+    color: blue;
+}
+
+
+
+input[type="number"] {
+    width: 50%; 
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+}
+
+
+@media screen and (max-width: 1200px) {
+    #cartTable {
+        width: 90%;
+    }
+    #cartTable td:nth-child(1) {
+        padding: 15px 10px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #cartTable {
+        width: 100%;
+    }
+    #cartTable td:nth-child(1) {
+        padding: 15px 5px;
+    }
+    
+}

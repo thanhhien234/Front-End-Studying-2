@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/font.css">
+    <link rel="stylesheet" href="/public/css/product.css">
+    <link rel="stylesheet" href="/public/css/index.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="product.html">Product</a>
+        <a href="cart.html">Cart</a>
+    </div>
+    <ul class="main-container">
+        <!-- <li class="item-wrapper"></li> -->
+    </ul>
+    <div class="modal" id="bookModal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+                <img src="" alt="Book Image" id="modalBookImage">
+                <div class="modal-text">
+                    <p>제목: <span id="modalBookTitle"></span></p>
+                    <p>가격: <span id="modalBookPrice"></span></p>
+                    <p>저자: <span id="modalBookAuthor"></span></p>
+                </div>
+            </div>
+            <button class="modal-btn">확인</button>
+          </div>
+        </div>
+    </div>
+    <div class="cart-animation"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+          crossorigin="anonymous"></script>
+    <script src="/public/js/getApi.js"></script>
+    <script src="/public/js/index.js"></script>
+    <script src ="/public/js/cart.js"></script>
+</body>
+</html>
