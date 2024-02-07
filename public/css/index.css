@@ -37,6 +37,30 @@
     height: 300px;
 }
 
+.recommended-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    column-gap: 10px;
+    padding: 10px 300px;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+
+
+/* 더보기 button */
+.read-more-button {
+    text-align: center;
+ }
+#read-more-button{
+    padding: 5px 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1200px) {
     .header-image {
         padding: 10px 20px;
