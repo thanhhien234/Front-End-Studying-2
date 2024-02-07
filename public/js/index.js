@@ -1,5 +1,22 @@
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
+let currentPoster = 0;
+const slides = document.querySelectorAll(".slider img");
+
+function nextSlide() {
+    currentPoster = (currentPoster + 1) % 3;
+    for (let i = 0; i < 3; i++) {
+        slides[i].style.transition = "transform 0.5s ease";
+        slides[i].style.transform = `translateX(-${currentPoster * 100}%)`;
+    }
+}
+
+setInterval(nextSlide, 2000);
+
+
+
+
+
 $(".recommended-wrapper").on("click", ".title", function() {
     window.location.href = "product.html";
 });
