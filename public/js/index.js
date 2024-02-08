@@ -1,8 +1,8 @@
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
+/* poster slide */
 let currentPoster = 0;
 const slides = document.querySelectorAll(".slider img");
-
 function nextSlide() {
     currentPoster = (currentPoster + 1) % 3;
     for (let i = 0; i < 3; i++) {
@@ -10,16 +10,27 @@ function nextSlide() {
         slides[i].style.transform = `translateX(-${currentPoster * 100}%)`;
     }
 }
+setInterval(nextSlide, 2500);
 
-setInterval(nextSlide, 2000);
 
+//topnav active menu
+var path = window.location.pathname;
+var page = path.split("/").pop();
 
+$('.topnav a').each(function() {
+    var href = $(this).attr('href');
+    if (page === href) {
+        $(this).addClass('active');
+    }
+});
 
 
 
 $(".recommended-wrapper").on("click", ".title", function() {
     window.location.href = "product.html";
 });
+
+
 
 
 $(".main-container").on("click", ".title", function() {
