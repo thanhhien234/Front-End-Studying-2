@@ -35,6 +35,7 @@ cartBody.on('change', 'input[type="number"]', function() {
     input.closest('tr').find('td:eq(2)').text(`${sum}원`);
     book.quantity = quantity;
     localStorage.setItem("cartItems", JSON.stringify(cartData));
+    updateTotalSum();
 });
 
 cartBody.on('click', '.material-symbols-outlined', function() {
@@ -43,4 +44,27 @@ cartBody.on('click', '.material-symbols-outlined', function() {
     cartData.splice(bookIndex, 1)
     row.remove();
     localStorage.setItem("cartItems", JSON.stringify(cartData));
+    updateTotalSum();
 });
+
+
+// Calculate total sum
+function updateTotalSum() {
+    let totalSum = 0;
+    cartData.forEach(book => {
+        totalSum += book.price * book.quantity;
+    });
+    $('#totalRow').remove();
+    cartBody.append(`
+        <tr id="totalRow">
+            <td></td>
+            <td>총 금액:</td>
+            <td>${totalSum}원</td>
+            <td></td>
+        </tr>
+    `);
+}
+updateTotalSum()
+
+
+
