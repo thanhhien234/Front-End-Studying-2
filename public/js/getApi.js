@@ -6,8 +6,8 @@ function showBooks() {
         $(".recommended-wrapper").addClass("show-animation");
         const book = booksData[i];
         $(".recommended-wrapper").append(`
-            <li class="item-wrapper">
-                <img src="${book.imageNum}">
+            <li class="item-wrapper" data-bookid="${book.id}">
+                <img src="${book.imagePath}">
                 <p class="title">${book.title}</p>
             </li>
         `);
@@ -20,7 +20,7 @@ function showBooks() {
 
 async function getBook() {
     await $.ajax({
-        url: "https://shopping-mall-rzdwe.run.goorm.site/books/",
+        url: "http://43.203.50.204:8080/api/books/list",
         type: "GET",
         success: function(data){
             booksData = data;
@@ -28,7 +28,7 @@ async function getBook() {
             $.each(data, function(index, book){
                 $(".main-container").append(`
                     <li class="item-wrapper" data-bookid="${book.id}">
-                        <img src="${book.imageNum}">
+                        <img src="${book.imagePath}">
                         <p class="title">${book.title}</p>
                         <p class="author">${book.author}</p>
                         <div class="item-price">

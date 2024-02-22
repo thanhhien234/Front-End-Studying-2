@@ -2,12 +2,11 @@ const cartData = JSON.parse(localStorage.getItem("cartItems")) || [];
 const cartBody = $("#cartTable tbody");
 
 cartData.forEach(book => {
-    console.log('cart.js book', book);
     const sum = book.price * book.quantity;
     cartBody.append(`
         <tr>
             <td class = "book" >
-                <img src="${book.imageNum}">
+                <img src="${book.imagePath}">
                 <div class="book-text">
                     <p class="title">${book.title}</p>
                         <p class="author">${book.author}원</p>

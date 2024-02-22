@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="/public/css/font.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/public/css/detail.css">
+    <link rel="stylesheet" href="/public/css/product.css">
+    <link rel="stylesheet" href="/public/css/index.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="product.html">Product</a>
+        <a href="cart.html">Cart</a>
+    </div>
+    <div class="detail-container">
+        <div class="book-details-container">
+            <div class="book-image-wrapper">
+                <img id="bookImage" src="">
+            </div>
+            <div class="book-details">
+                <p class="title" id="bookTitle"></p>
+                <p class="author" id="bookAuthor"></p>
+                <div class="review">
+                    <img src="/public/assets/star2.png" alt="Star" class="star">
+                    <img src="/public/assets/star2.png" alt="Star" class="star">
+                    <img src="/public/assets/star2.png" alt="Star" class="star">
+                    <img src="/public/assets/star2.png" alt="Star" class="star">
+                    <img src="/public/assets/star1.png" alt="Star" class="star">
+                    <span> (123)</span>
+                </div>
+                <p class="description" id="bookDescription">Description</p>
+                <p class="price" id="bookPrice"></p>
+                <button class="cart-btn" type="button">장바구니</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+    <script src="/public/js/index.js"></script>
+    <script src ="/public/js/getApi.js"></script>
+    <script src ="/public/js/cart.js"></script>
+    <script src ="/public/js/searchBookApi.js"></script>
+</body>
+</html>
