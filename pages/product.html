@@ -18,6 +18,15 @@
         <a href="cart.html">Cart</a>
         <a href="admin.html">Admin</a>
     </div>
+    <div class="sorting-select-wrapper">
+        <select id="sortingSelect" onchange="handleSelectChange()">
+            <option value="default" selected>기본순</option>
+            <option value="lowPrice">낮은 가격순</option>
+            <option value="highPrice">높은 가격순</option>
+            <option value="nameAscending">상품명 오름차순</option>
+            <option value="nameDescending">상품명 내림차순</option>
+        </select>
+    </div>
     <ul class="main-container">
         <!-- <li class="item-wrapper"></li> -->
     </ul>

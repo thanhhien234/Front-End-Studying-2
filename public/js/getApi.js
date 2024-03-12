@@ -56,5 +56,41 @@ $("#read-more-button").on("click", function() {
     }
 });
 
-getBook();
 
+getBook()
+
+// product.html: sorting 
+function handleSelectChange() {
+    const selectedOption = $("#sortingSelect").val();
+    switch (selectedOption) {
+        case "default":
+            booksData.sort((a, b) => a.id - b.id);
+            break;
+        case "lowPrice":
+            booksData.sort((a, b) => a.price - b.price);
+            break;
+        case "highPrice":
+            booksData.sort((a, b) => b.price - a.price);
+            break;
+        case "nameAscending":
+            booksData.sort((a, b) => a.title.localeCompare(b.title));
+            break;
+        case "nameDescending":
+            booksData.sort((a, b) => b.title.localeCompare(a.title));
+            break;
+    }
+    $(".main-container").empty();
+    $.each(booksData, function(index, book){
+        $(".main-container").append(`
+            <li class="item-wrapper" data-bookid="${book.id}">
+                <img src="${book.imagePath}">
+                <p class="title">${book.title}</p>
+                <p class="author">${book.author}</p>
+                <div class="item-price">
+                    <p class="price">${book.price}원</p>
+                    <button class="cart-btn" type="button">장바구니</button>
+                </div>
+            </li>
+        `);
+    });
+}
